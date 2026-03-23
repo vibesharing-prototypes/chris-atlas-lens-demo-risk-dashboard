@@ -1,12 +1,12 @@
 "use client";
 
 const navItems = [
-  { icon: "🏠", label: "Home", active: true },
-  { icon: "📊", label: "Risk Overview", active: false },
-  { icon: "🔍", label: "Investigations", active: false },
-  { icon: "📋", label: "Compliance", active: false },
-  { icon: "📈", label: "Reports", active: false },
-  { icon: "⚙️", label: "Settings", active: false },
+  { icon: "\u{1F3E0}", label: "Home", active: true },
+  { icon: "\u{1F4CA}", label: "Risk Overview", active: false },
+  { icon: "\u{1F50D}", label: "Investigations", active: false },
+  { icon: "\u{1F4CB}", label: "Compliance", active: false },
+  { icon: "\u{1F4C8}", label: "Reports", active: false },
+  { icon: "\u2699\uFE0F", label: "Settings", active: false },
 ];
 
 const risks = [
@@ -18,15 +18,16 @@ const risks = [
 ];
 
 function StatusBadge({ status, children }: { status: string; children: React.ReactNode }) {
+  const bgVar = "var(--status-" + status + "-muted)";
+  const fgVar = "var(--status-" + status + ")";
   return (
     <span style={{
       display: "inline-flex", alignItems: "center", gap: 6,
       padding: "2px 10px", fontSize: 12, fontWeight: 600,
       borderRadius: "var(--radius-full)",
-      background: \`var(--status-\${status}-muted)\`,
-      color: \`var(--status-\${status})\`,
+      background: bgVar, color: fgVar,
     }}>
-      <span style={{ width: 6, height: 6, borderRadius: "50%", background: \`var(--status-\${status})\` }} />
+      <span style={{ width: 6, height: 6, borderRadius: "50%", background: fgVar }} />
       {children}
     </span>
   );
