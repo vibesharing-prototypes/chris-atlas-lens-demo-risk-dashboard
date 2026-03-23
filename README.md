@@ -1,2 +1,14 @@
-# chris-atlas-lens-demo-risk-dashboard
-Prototype: Atlas Lens Demo — Risk Dashboard - Deployed via VibeSharing
+# Atlas Lens Demo — Risk Dashboard
+
+Deployed via [VibeSharing](https://vibesharing.app).
+
+## Local Development
+
+```bash
+npm install
+npm run dev
+```
+
+## Deploy
+
+Push to main branch - changes go live automatically.
